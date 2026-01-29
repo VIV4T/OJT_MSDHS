@@ -12,7 +12,7 @@ RUN pip install --no-cache-dir --upgrade pip \
 RUN printf '%s\n' \
 '#!/bin/sh' \
 'set -e' \
-'jupyter notebook --ip=0.0.0.0 --port=8888 --no-browser --allow-root --NotebookApp.token= --NotebookApp.password=' \
+'jupyter notebook --notebook-dir=/app/course --ip=0.0.0.0 --port=8888 --no-browser --allow-root --NotebookApp.token= --NotebookApp.password=' \
 > /usr/local/bin/start-jupyter.sh \
 && chmod +x /usr/local/bin/start-jupyter.sh
 
