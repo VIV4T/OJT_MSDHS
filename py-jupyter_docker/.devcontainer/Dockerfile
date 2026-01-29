@@ -14,4 +14,10 @@ RUN pip install --no-cache-dir --upgrade pip \
 EXPOSE 8888
 
 # Bind on all interfaces so the host can access it
-CMD ["jupyter", "notebook", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--allow-root"]
+CMD ["jupyter", "notebook",
+     "--ip=0.0.0.0",
+     "--port=8888",
+     "--no-browser",
+     "--allow-root",
+     "--NotebookApp.token=",
+     "--NotebookApp.password="]
